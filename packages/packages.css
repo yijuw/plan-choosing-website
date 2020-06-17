@@ -1,0 +1,136 @@
+main {
+    padding-top: 2rem;
+}
+
+.background {
+    background: url("../images/plan-background.jpg") center/cover;
+    filter: grayscale(50%);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+}
+
+.package {
+    width: 80%;
+    margin: 1rem 0;
+    border: 4px solid #113a11;
+    border-left: none;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.package:hover,
+.package:active {
+    border-color: #f16532;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+    animation: move-up 500ms ease-out forwards;
+}
+
+
+.package a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 2rem;
+}
+
+
+.package__badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    font-size: 0.8rem;
+    color: #f77373;
+    background: #e9e932;
+    padding: 0.5rem;
+    transform: rotateZ(45deg) translateX(3.5rem) translateY(-1rem);
+    transform-origin: center ;
+    width: 12rem;
+    text-align: center;
+}
+
+.package__subtitle {
+    color: #646363;
+}
+
+.package__info {
+    color: #113a11;
+    background-color: white;
+    padding: 1rem;
+    border:1px solid #113a11;
+    font-size: 1.25rem;
+    line-height: 2
+}
+
+.clearfix {
+    clear: both
+}
+
+#plus {
+    background: rgba(236, 232, 255, 0.95);
+}
+
+#free {
+    background: rgba(210, 214, 245, 0.96);
+    float: right;
+    border-right: none;
+    border-left: 4px solid #113a11;
+    text-align: right
+}
+
+#free:hover,
+#free:active {
+    border-left-color: #f16532;
+}
+
+#premium {
+    background: rgba(154, 150, 175, 0.96);
+}
+
+#premium .package__title {
+    color: white;
+}
+
+#premium .package__subtitle {
+    color: rgb(92, 90, 90);
+}
+
+@media (min-width: 40rem) {
+    main {
+        max-width: 1300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1300px) {
+    .package  {
+        border-left: 4px solid #113a11;;
+    }
+    #free {
+        border-right: 4px solid #113a11;;
+    }
+    #free:hover,
+    #free:active {
+        border-right-color: #f16532;
+    }
+}
+
+@keyframes move-up {
+    0%{
+        transform: translateY(0);
+    }
+    33%{
+        transform: translateY(-1.5rem);
+    }
+    100%{
+        transform: translateY(-1rem);
+    }
+}
+
+
+
+
